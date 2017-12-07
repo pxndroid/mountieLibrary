@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainWindow.MainWindowController">
+   <children>
+      <BorderPane layoutX="464.0" layoutY="248.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="29.0" prefWidth="1180.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="1180.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="File">
+                        <items>
+                          <MenuItem fx:id="logoutMenuItem" mnemonicParsing="false" onAction="#logoutUser" text="Logout" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Edit">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Course Panel" />
+                              <MenuItem mnemonicParsing="false" text="Teacher Panel" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Help">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="About" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.29626485568760613" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab closable="false" text="New Student">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                  <AnchorPane layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Text fill="#0091ea" layoutX="72.0" layoutY="25.94140625" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Registration Details" AnchorPane.bottomAnchor="528.541015625" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="59.1162109375" AnchorPane.topAnchor="6.517578125">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator layoutX="13.0" layoutY="33.0" prefHeight="4.0" prefWidth="322.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="33.0" />
+                                          <GridPane layoutX="13.0" layoutY="89.0" prefHeight="382.0" prefWidth="324.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="89.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.33334350585938" minWidth="10.0" prefWidth="77.33333587646484" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.66666412353516" minWidth="10.0" prefWidth="233.66666412353516" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newStudFN" GridPane.columnIndex="1" />
+                                                <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newStudLN" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newStudAddress" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newStudPhone" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Text disable="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newStudEmail" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                             </children>
+                                          </GridPane>
+                                          <Text fill="#673ab7" layoutX="13.0" layoutY="74.611328125" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information" AnchorPane.bottomAnchor="480.1220703125" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="186.33349609375" AnchorPane.topAnchor="56.2666015625">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator focusTraversable="false" layoutX="14.0" layoutY="482.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                                          <Button fx:id="newStudClearButton" layoutX="45.0" layoutY="500.0" mnemonicParsing="false" onAction="#clearNewStudentForm" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF5151; -fx-text-fill: white;" text="Clear" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" />
+                                          <Button layoutX="213.0" layoutY="499.0" mnemonicParsing="false" onAction="#newStudentButton" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="AddNew" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                        <Tab closable="false" text="New Book">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Button layoutX="225.0" layoutY="500.0" mnemonicParsing="false" onAction="#newBookButton" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="AddNew" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0" />
+                                          <Text fill="#0091ea" layoutX="72.0" layoutY="25.94140625" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Registation Details" AnchorPane.bottomAnchor="528.541015625" AnchorPane.leftAnchor="72.0" AnchorPane.rightAnchor="59.1162109375" AnchorPane.topAnchor="6.517578125">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Separator layoutX="13.0" layoutY="33.0" prefHeight="4.0" prefWidth="322.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="33.0" />
+                                          <GridPane layoutX="17.0" layoutY="56.0" prefHeight="438.0" prefWidth="323.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="56.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newBookISBN" GridPane.columnIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newBookTitle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Publication Year" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newBookYear" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Copies" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newBookCopies" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="newBookAuthor" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.33334350585938" minWidth="10.0" prefWidth="118.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.3333282470703" minWidth="10.0" prefWidth="189.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Separator layoutX="13.0" layoutY="520.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                                          <Button fx:id="adminClearButtonClick2" layoutX="45.0" layoutY="500.0" mnemonicParsing="false" onAction="#clearNewBookForm" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF5151; -fx-text-fill: white;" text="Clear" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Update Record">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Button alignment="CENTER" layoutX="22.0" layoutY="503.0" mnemonicParsing="false" onAction="#deleteUpdateButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF3F3C; -fx-text-fill: white;" text="Delete" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="20.0" />
+                                          <GridPane layoutX="26.0" layoutY="42.0" prefHeight="229.0" prefWidth="314.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="42.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="fNameUpdateTF" GridPane.columnIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="lNameUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="iDUpdateTF" editable="false" focusTraversable="false" opacity="0.75" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="emailUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                <TextField fx:id="phoneUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="addressUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.3333282470703" minWidth="10.0" prefWidth="72.99999237060547" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.6666717529297" minWidth="10.0" prefWidth="241.00000762939453" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Separator layoutX="14.0" layoutY="277.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="277.0" />
+                                          <Separator layoutX="13.0" layoutY="520.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                                          <Button fx:id="clearUpdateButton" layoutX="131.0" layoutY="509.0" mnemonicParsing="false" onAction="#clearUpdateFormButton" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF5151; -fx-text-fill: white;" text="Clear" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="131.0" />
+                                          <Button fx:id="saveUpdateButton" layoutX="246.0" layoutY="504.0" mnemonicParsing="false" onAction="#saveUpdateButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #408E2F; -fx-text-fill: white;" text="Save" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="20.0" />
+                                          <GridPane layoutX="33.0" layoutY="312.0" prefHeight="177.0" prefWidth="314.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="312.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="isbnUpdateTF" editable="false" focusTraversable="false" opacity="0.75" GridPane.columnIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="titleUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Publication Year" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="yearUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="authorUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Copies" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="copiesUpdateTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.6666717529297" minWidth="10.0" prefWidth="101.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="198.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Label layoutX="9.0" layoutY="14.0" text="Student Information" textFill="#673ab7">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="287.0" text="Book Information" textFill="#673ab7">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab closable="false" text="Check-out/in">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0">
+                                 <children>
+                                    <AnchorPane layoutY="-1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="559.0" prefWidth="346.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <GridPane layoutX="26.0" layoutY="24.0" prefHeight="189.0" prefWidth="314.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="24.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="fNameCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="lNameCheckOutTF" editable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="iDCheckOutTF" editable="false" focusTraversable="false" opacity="0.75" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Address" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="addressCheckOutTF" editable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="phoneCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="emailCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.3333282470703" minWidth="10.0" prefWidth="72.99999237060547" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.6666717529297" minWidth="10.0" prefWidth="241.00000762939453" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Separator layoutX="12.0" layoutY="258.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="258.0" />
+                                          <Separator layoutX="13.0" layoutY="520.0" prefHeight="4.0" prefWidth="200.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" />
+                                          <Button fx:id="clearCheckOutB" layoutX="35.0" layoutY="503.0" mnemonicParsing="false" onAction="#clearCheckoutFormButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF5151; -fx-text-fill: white;" text="Clear" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" />
+                                          <Button fx:id="processCheckOutButton" layoutX="217.0" layoutY="503.0" mnemonicParsing="false" onAction="#processCheckOutButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #408E2F; -fx-text-fill: white;" text="Check-out" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                                          <GridPane layoutX="33.0" layoutY="288.0" prefHeight="207.0" prefWidth="314.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="288.0">
+                                             <children>
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Transaction #">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="transCheckOutTF" editable="false" focusTraversable="false" opacity="0.75" GridPane.columnIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ISBN" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="isbnCheckOutTF" editable="false" focusTraversable="false" opacity="0.75" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="titleCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Publication Year" GridPane.rowIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="yearCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Author" GridPane.rowIndex="4">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="authorCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Avaliable copies" GridPane.rowIndex="5">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Text>
+                                                <TextField fx:id="copiesCheckOutTF" editable="false" focusTraversable="false" opacity="0.8" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.6666717529297" minWidth="10.0" prefWidth="103.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="211.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                          <Text fill="#673ab7" layoutX="22.0" layoutY="19.3447265625" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Information" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="1.0">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Text>
+                                          <Text fill="#673ab7" layoutX="22.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Information" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="266.6552734375">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Text>
+                                          <ComboBox fx:id="checkOutCBox" layoutX="24.0" layoutY="222.0" onMouseClicked="#mouseClickComboBox" prefHeight="25.0" prefWidth="314.0" promptText="Student Current Check-out Books" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="222.0" />
+                                          <Button fx:id="processCheckIntButton" layoutX="227.0" layoutY="513.0" mnemonicParsing="false" onAction="#processCheckInButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #408E2F; -fx-text-fill: white;" text="Check-in" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="130.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="searchTextField" layoutX="549.0" layoutY="4.0" promptText="Student ID or ISBN" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="6.0" />
+                        <Button fx:id="searchButton" layoutX="723.0" layoutY="4.0" mnemonicParsing="false" onAction="#searchButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Search" textFill="WHITE" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="6.0" />
+                        <Button fx:id="viewButton" layoutX="46.0" layoutY="4.0" mnemonicParsing="false" onAction="#viewButtonPressed" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="View" textFill="WHITE" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="6.0" />
+                        <TableView fx:id="resultsTableView" layoutX="14.0" layoutY="39.0" onMouseClicked="#mouseClickTableView" prefHeight="533.0" prefWidth="822.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-12.0" AnchorPane.topAnchor="39.0">
+                          <columns>
+                            <TableColumn fx:id="studentFirstNameCol" maxWidth="1000.0" minWidth="100.0" prefWidth="100.0" text="F. Name" />
+                              <TableColumn fx:id="studentLastNameCol" maxWidth="1000.0" minWidth="50.0" prefWidth="125.0" text="L. Name" />
+                              <TableColumn fx:id="studentIDCol" maxWidth="1000.0" minWidth="80.0" text="ID" />
+                              <TableColumn fx:id="studentAddressCol" maxWidth="1000.0" minWidth="115.0" prefWidth="165.0" text="Address" />
+                              <TableColumn fx:id="studentPhoneCol" maxWidth="200.0" minWidth="80.0" text="Phone" />
+                              <TableColumn fx:id="studentEmailCol" minWidth="300.0" prefWidth="300.0" text="Email" />
+                          </columns>
+                        </TableView>
+                        <RadioButton fx:id="borrowersRadioButton" layoutX="152.0" layoutY="4.0" mnemonicParsing="false" onMouseClicked="#clearTableView" selected="true" text="Students" AnchorPane.leftAnchor="152.0" AnchorPane.topAnchor="8.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="borrobooksRadioGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="booksRadioButton" layoutX="262.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#clearTableView" text="Books" toggleGroup="$borrobooksRadioGroup" AnchorPane.leftAnchor="275.0" AnchorPane.topAnchor="8.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

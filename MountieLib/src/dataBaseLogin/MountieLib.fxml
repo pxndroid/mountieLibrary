@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dataBaseLogin.MountieLibController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="143.0" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="222.0" minWidth="10.0" prefWidth="205.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="10.0" prefWidth="62.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints maxHeight="69.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="86.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="User Name" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Label text="Password" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <TextField fx:id="textUserName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label fx:id="labelResult" prefHeight="69.0" prefWidth="203.0" text=" " textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font></Label>
+      <PasswordField fx:id="textPassword" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="loginButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#loginButtonPressed" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
